@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Swarna Venkata Naga Sasidhar reddy</title>
+		<!--<style type="text/css"/>-->
+	</head>
+	
+		<body background="YBClanding5.jpg">
+		<p style="text-align:right"><a href="https://twitter.com/YBC_SmallPark" target="_blank"><button type="button"><img src="twitter.jpg" width="15" height="15" alt="follow icon"/><b>follow</b>@<b>YBC</b></button></a></p>			
+		<br></br><br></br><br></br><br></br><br></br>
+		<marquee behavior="ALTERNATE" bgcolor="White"><img src="rockets.jpg" width="50" height="50" alt="rockets" /> &nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="razor.png" width="50" height="50" alt="razors" />
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="avalanche.jpg" width="50" height="50" alt="Avalanche" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="wolf.jpg" width="50" height="50" alt="wolf" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp <img src="outsiders.jpg" width="50" height="50" alt="outsiders" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp <img src="aliens.png" width="50" height="50" alt="aliens" />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</marquee><br><br>
+<p style="font-family:Georgia;font-size:25px;color:Green;text-align:center"><b>Teams</b></p>
+<?php
+		DEFINE ('DB_USER', 'cs566105');
+        DEFINE ('DB_PASSWORD', '4hFQi5TJT');
+        DEFINE ('DB_HOST','courses');
+        DEFINE ('DB_NAME','cs566105');
+		$dbconnection = @mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
+        or die ('Could not connect to MySql:' .mysqli_connect_error() );
+        mysqli_set_charset($dbconnection, 'utf8');
+        $query = "select * from Teams";
+        $result = mysqli_query ($dbconnection, $query);
+		if (mysqli_num_rows($result) > 0) 
+        {
+			echo "<table width='95%' border='1' align='center' height='40%' 
+		<tr bgcolor='YellowGreen'>
+		<th>Team_id</th>
+		<th>Team Name</th>
+		<th>Matches Played</th>
+		<th>Matches Won</th>
+		<th>Matches Lost</th>
+		<th>No Results</th>
+		</tr>";
+		
+         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+		{
+		echo "<tr align='center' bgcolor='white'>";
+        echo "<td>" .$row['Team_id']. "</td>";
+		echo "<td>" .$row['Team_name']. "</td>";
+		echo "<td>" .$row['Matches_Played']. "</td>";
+		echo "<td>" .$row['Matches_won']. "</td>";
+		echo "<td>" .$row['Matches_lost']. "</td>"; 
+		echo "<td>" .$row['No_results']. "</td>"; 
+		echo "</tr>";
+		}
+		echo"</table>";
+		}
+		 else 
+{
+ echo "Query didn't return any result";
+}
+?>
+</body>
+</html>

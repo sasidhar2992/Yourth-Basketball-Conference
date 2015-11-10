@@ -1,0 +1,39 @@
+INSERT INTO Players
+VALUES
+('AVA12','Jon Forest','Avalanche','456 Zellven St','555-9876','jforest@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA55','Blake Brown','Avalanche','382 Piros Ct','555-8765','bbrown@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA99','Delilah Buchanan','Avalanche','781 Huntings Dr','555-7654','delnam92@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA21','Buffy Sommers','Avalanche','433 Zellven St','555-6543','buffyvamp1@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA08','Brian Brown','Avalanche','66 Bumms Ct','555-5432','brainbr@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA09','Dave Wearly','Avalanche','6522 BlackCrow St','555-4321','davewearly@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA16','Bob Seger','Avalanche','878 BlackCrow St','555-3210','bobseger@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA69','John Hurt','Avalanche','676 Arun Dr','555-2109','johnhurtz@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA03','Bill Broonzy','Avalanche','456 Seshi Ct','555-1098','billbroon@avalanche.org',' ');
+
+INSERT INTO Players
+VALUES
+('AVA24','Tony Zell','Avalanche','763 WestRidge Apts','555-1123','ZonyTell@avalanche.org',' ');

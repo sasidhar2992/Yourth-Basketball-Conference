@@ -1,0 +1,25 @@
+mysql> Create table Referee(Referee_id varchar(5)  NOT NULL primary key, Referee_name char(25), Referee_address varchar(30), Referee_phno int(12), Referee_mailid varchar(20));
+ERROR 1050 (42S01): Table 'Referee' already exists
+mysql> drop table Referee;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> Create table Referee(Referee_id varchar(5)  NOT NULL primary key, Referee_name char(25), Referee_address varchar(30), Referee_phno int(12), Referee_mailid varchar(20));
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> describe Referee;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| Referee_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Referee_name    | char(25)    | YES  |     | NULL    |       |
+| Referee_address | varchar(30) | YES  |     | NULL    |       |
+| Referee_phno    | int(12)     | YES  |     | NULL    |       |
+| Referee_mailid  | varchar(20) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> Create table Teams( Team_id char(5) NOT NULL primary key, Team_name char(25), Coach_name char(30), Description varchar(50), Rating int(5), foregin key (Coach_name) references Coach(Coach_name) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key (Coach_name) references Coach(Coach_name) )' at line 1
+mysql> Create table Teams( Team_id char(5) NOT NULL primary key, Team_name char(25), Coach_name char(30), Description varchar(50), Rating int(5), FOREGIN KEY (Coach_name) REFERENCES Coach(Coach_name) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'KEY (Coach_name) REFERENCES Coach(Coach_name) )' at line 1
+mysql> \t

@@ -1,0 +1,35 @@
+INSERT INTO Players
+VALUES
+('ALI58','Jim Kirk','Aliens','769 Spiros Ct','555-5567','jimkirk@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI96','Luke Skywalker','Aliens','768 Fotis Dr','555-5678','skywalkers96@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI45','Wesley Crusher','Aliens','7204 Eco Park','555-5789','Wesleykings@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI05','Samantha Carter','Aliens','99 Kolla Rd','555-5890','cartersammy05@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI09','John Crichton','Aliens','456 Harsha Ave','555-5901','johnco09@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI04','Aeryn Sun','Aliens','6704 BlackHawk St','555-5012','AerynSun@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI65','Jack O''Neill','Aliens','42 Second Rd','555-9123','oneill@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI12','Daniel Jackson','Aliens','67 Sasuke St','555-9234','danjack12@aliens.org',' ');
+
+INSERT INTO Players
+VALUES
+('ALI74','Paul Davis','Aliens','2002 Sycamore St','555-9345','pauldavis@aliens.org',' ');

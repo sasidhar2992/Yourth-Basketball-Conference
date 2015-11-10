@@ -1,0 +1,123 @@
+mysql> select * from Teams;
++---------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+-------------+--------------+------------+
+| Team_id | Team_name  | Description                                                                                                                                            | Matches_Played | Matches_won | Matches_lost | No_results |
++---------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+-------------+--------------+------------+
+| ALI     | Aliens     | Though they were not the most capable teams in the tournament their hardwork always paid. They were int semi-finals last year by defeating some of the |              4 |           3 |            1 |          0 |
+| AVA     | Avalanches | The Avalanches were underdogs int this tournament. But they rose to fame after defeating few the best teams tournament                                 |              4 |           2 |            1 |          1 |
+| OUS     | Outsiders  | The outsiders have legacy of winning game from nowhere.Ms.Hinton has been there best ever. But, there has always been a problem with the teams consist |              4 |           1 |            3 |          0 |
+| RAZ     | Razors     | The razors were the finalists in the last two tournaments, but luck was not oon their side in the last two occasions.Hope they have a chance this time |              4 |           1 |            3 |          0 |
+| RKT     | Rockets    | The moment Mr.Smith joined as the coach of rockets, the teams fate changed drastically. They were the last years semifinalists                         |              4 |           2 |            2 |          0 |
+| WLF     | WolfClan   | They are one of most dominant teams in the tournament. They have good young players who can win matches single handedly.                               |              4 |           2 |            1 |          1 |
++---------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+-------------+--------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from Games;
++-------------+------------+------------+----------------------+-----------+-------------+-----------+-------------+
+| Game_number | Match_date | Match_time | Stadium              | Home_team | Points_home | Away_team | Points_away |
++-------------+------------+------------+----------------------+-----------+-------------+-----------+-------------+
+|           1 | 2014-05-04 | 12:00:00   | Robin Ali Stadium    | ALI       |          21 | RAZ       |          16 |
+|           2 | 2014-05-04 | 15:00:00   | Rumble Door Stadium  | AVA       |          23 | OUS       |          26 |
+|           3 | 2014-05-11 | 13:10:00   | KevinNash Auditorium | RAZ       |          24 | RKT       |          29 |
+|           4 | 2014-05-11 | 17:30:00   | Huskies Stadium      | OUS       |          17 | WLF       |          31 |
+|           5 | 2014-05-18 | 11:10:00   | Rancoth CLub         | RKT       |          28 | ALI       |          27 |
+|           6 | 2014-05-18 | 15:00:00   | Bay Club Stadium     | WLF       |          29 | AVA       |          40 |
+|           7 | 2014-05-25 | 12:00:00   | KevinNash Auditorium | RAZ       |          20 | ALI       |          32 |
+|           8 | 2014-06-01 | 10:00:00   | Huskies Stadium      | OUS       |          24 | AVA       |          27 |
+|           9 | 2014-06-08 | 12:00:00   | Ranchoth Stadium     | RKT       |          25 | RAZ       |          30 |
+|          10 | 2014-06-08 | 16:00:00   | Bay Club Stadium     | WLF       |          29 | OUS       |          16 |
+|          11 | 2014-06-15 | 12:30:00   | Robin Ali Stadium    | ALI       |          44 | RKT       |          29 |
+|          12 | 2014-06-22 | 17:10:00   | Bay Club Stadium     | WLF       |          29 | AVA       |          29 |
+|          13 | 2014-06-29 | 11:00:00   | Robin Ali Stadium    | ALI       |        NULL | AVA       |        NULL |
+|          14 | 2014-06-29 | 14:00:00   | Ranchoth Stadium     | RKT       |        NULL | WLF       |        NULL |
+|          15 | 2014-07-06 | 16:00:00   | Huskies Stadium      | TBA       |        NULL | TBA       |        NULL |
++-------------+------------+------------+----------------------+-----------+-------------+-----------+-------------+
+15 rows in set (0.01 sec)
+
+mysql> select * from Players;
++-----------+---------------------+--------------------+--------------+---------------------------+---------+
+| Player_id | Player_name         | Player_address     | Home_phno    | Player_email              | Team_id |
++-----------+---------------------+--------------------+--------------+---------------------------+---------+
+| ALI04     | Aeryn Sun           | 6704 BlackHawk St  | 815-508-8854 | AerynSun@aliens.org       | ALI     |
+| ALI05     | Samantha Carter     | 99 Kolla Rd        | 815-509-9809 | cartersammy05@aliens.org  | ALI     |
+| ALI09     | John Crichton       | 456 Harsha Ave     | 720-576-9909 | johnco09@aliens.org       | ALI     |
+| ALI12     | Daniel Jackson      | 67 Sasuke St       | 720-576-9876 | danjack12@aliens.org      | ALI     |
+| ALI45     | Wesley Crusher      | 7204 Eco Park      | 682-576-5545 | Wesleykings@aliens.org    | ALI     |
+| ALI58     | Jim Kirk            | 769 Spiros Ct      | 815-666-9234 | jimkirk@aliens.org        | ALI     |
+| ALI65     | Jack O'Neill        | 42 Second Rd       | 847-456-9878 | oneill@aliens.org         | ALI     |
+| ALI74     | Paul Davis          | 2002 Sycamore St   | 815-845-7458 | pauldavis@aliens.org      | ALI     |
+| ALI96     | Luke Skywalker      | 768 Fotis Dr       | 815-258-1452 | skywalkers96@aliens.org   | ALI     |
+| AVA03     | Bill Broonzy        | 456 Seshi Ct       | 815-822-7858 | billbroon@avalanche.org   | AVA     |
+| AVA08     | Brian Brown         | 66 Bumms Ct        | 602-528-6589 | brainbr@avalanche.org     | AVA     |
+| AVA09     | Dave Wearly         | 6522 BlackCrow St  | 602-745-3265 | davewearly@avalanche.org  | AVA     |
+| AVA12     | Jon Forest          | 456 Zellven St     | 720-857-4125 | jforest@avalanche.org     | AVA     |
+| AVA16     | Bob Seger           | 878 BlackCrow St   | 815-857-8577 | bobseger@avalanche.org    | AVA     |
+| AVA21     | Buffy Sommers       | 433 Zellven St     | 815-785-5858 | buffyvamp1@avalanche.org  | AVA     |
+| AVA24     | Tony Zell           | 763 WestRidge Apts | 815-858-4789 | ZonyTell@avalanche.org    | AVA     |
+| AVA55     | Blake Brown         | 382 Piros Ct       | 470-565-4774 | bbrown@avalanche.org      | AVA     |
+| AVA69     | John Hurt           | 676 Arun Dr        | 470-424-1234 | johnhurtz@avalanche.org   | AVA     |
+| AVA99     | Delilah Buchanan    | 781 Huntings Dr    | 815-696-9998 | delnam92@avalanche.org    | AVA     |
+| OUT01     | John Pope           | 66 Kelven St       | 815-477-4777 | popejohn1@outsiders.org   | OUS     |
+| OUT02     | Bukka White         | 99 Kolla Rd        | 420-222-2323 | bwhite91@outsiders.org    | OUS     |
+| OUT12     | Sebastian Monroe    | 6700 BlackHawk St  | 815-525-5845 | monroe12@outsiders.org    | OUS     |
+| OUT18     | Aaron Pittman       | 89 First Rd        | 602-576-9909 | aaronpittman@outsiders.or | OUS     |
+| OUT22     | Claire Randall      | 145 Vinay Dr       | 847-555-5858 | randall92@outsiders.org   | OUS     |
+| OUT55     | Brian Fraser        | 49 Pappas Ct       | 602-141-1452 | brian66@outsiders.org     | OUS     |
+| OUT65     | Miles Matheson      | 123 Harsha Ave     | 815-585-5452 | mileshigh65@outsiders.org | OUS     |
+| OUT99     | Alexander MacKenzie | 45 Pappas Ct       | 847-252-9685 | alexmackenzy@outsiders.or | OUS     |
+| RAZ01     | Brian May           | 23 BlackCrow St    | 815-414-1144 | bmay1@razors.org          | RAZ     |
+| RAZ06     | Robert Johnson      | 45th Ethnies Dr    | 847-474-4774 | Robjohnson@razors.org     | RAZ     |
+| RAZ07     | HoneyBoy Edwards    | 6700 BlackCrow St  | 815-121-1221 | hbedwards07@razors.org    | RAZ     |
+| RAZ11     | Randy Duncan        | 11 Harsha Ave      | 847-363-3663 | randy11@razors.org        | RAZ     |
+| RAZ14     | Mick Jagger         | 23 Fifth Ave       | 815-121-2522 | mickjagger@razors.org     | RAZ     |
+| RAZ16     | Rick Springfield    | 21 Zellven St      | 602-525-2323 | rsfield@razors.org        | RAZ     |
+| RAZ37     | John Lennon         | 45 Pappas Ct       | 815-121-1156 | jlennon@razors.org        | RAZ     |
+| RAZ65     | George Harrison     | 7 Kista Rd         | 847-296-9699 | georgeh92@razors.org      | RAZ     |
+| ROC01     | John Smith          | 102 Elven St       | 847-454-8989 | jsmith@rockets.com        | RKT     |
+| ROC04     | Jake Jonnson        | 376 Seshi Ct       | 815-888-5656 | jjohnson@rockets.com      | RKT     |
+| ROC07     | Bobbie Spencer      | 722 Elven St       | 815-859-4545 | bSpencer@rockets.com      | RKT     |
+| ROC09     | Mitchell Green      | 356 Chiros Ct      | 602-787-9696 | mgreen@rockets.com        | RKT     |
+| ROC11     | Mike McElven        | 6322 Arun Dr       | 815-969-3636 | mcelven@rockets.com       | RKT     |
+| ROC14     | Mark Doe            | 1124 Chiros Ct     | 815-989-3625 | markd@rockets.com         | RKT     |
+| ROC18     | Ben Folds           | 322 Chiros Ct      | 302-986-3333 | bfolds@rockets.com        | RKT     |
+| ROC21     | Jeff Green          | 798 Chiros Ct      | 815-696-6336 | jeffgreen@rockets.com     | RKT     |
+| ROC55     | Luke Spencer        | 789 Huntings Dr    | 302-585-5885 | lspencer@rockets.com      | RKT     |
+| ROC66     | Maria Hughes        | 123 Westwood Apt   | 602-686-6547 | mariah@rockets.com        | RKT     |
+| WLF09     | Geillis Duncan      | 21 Kirk Ave        | 815-445-4454 | duncang09@wolfclan.org    | WLF     |
+| WLF27     | Stu Redman          | 45 Pappas Ct       | 858-658-2147 | sturedman@wolfclan.org    | WLF     |
+| WLF36     | Roland Deschain     | 89 First Rd        | 858-214-7847 | rolandd@wolfclan.org      | WLF     |
+| WLF45     | Eddie Dean          | 123 Harsha Ave     | 470-658-5858 | eddiedean@wolfclan.org    | WLF     |
+| WLF54     | Jake Chambers       | 6700 BlackHawk St  | 470-252-5858 | jakecham@wolfclan.org     | WLF     |
+| WLF63     | Susannah Dean       | 43 BlackHawk St    | 504-874-2121 | deansusa@wolfclan.org     | WLF     |
+| WLF72     | Frank Randall       | 123 Harsha Ave     | 608-747-5441 | randall72@wolfclan.org    | WLF     |
+| WLF81     | Randall Flagg       | 77 Kista Rd        | 815-212-3214 | randallflagg@wolfclan.org | WLF     |
+| WLF99     | Keith Richards      | 23 Fifth Ave       | 847-747-2112 | krichards@wolfclan.org    | WLF     |
++-----------+---------------------+--------------------+--------------+---------------------------+---------+
+54 rows in set (0.00 sec)
+
+mysql> select * from Coach;
++----------+-----------------+-------------------------------------------+--------------+----------------------------+---------+
+| Coach_id | Coach_name      | Coach_address                             | Coach_phno   | email                      | Team_id |
++----------+-----------------+-------------------------------------------+--------------+----------------------------+---------+
+| CYrkt    | Mr Smith        | 401 Hillcrest Road,Dekalb,IL-60115        | 815-995-1771 | smith091@gmail.com         | RKT     |
+| CYava    | Mr.Forest       | 331 Kenshire Apt-12/2,Burlington,IL-60654 | 815-995-0777 | forest_dr@yahoo.com        | AVA     |
+| CYraz    | Mr.Dustin keely | 318 San Pedra,Sycamore,IL-60125           | 331-442-1364 | D_keely@yahoo.in           | RAZ     |
+| CYous    | Ms.Hinton       | 19-11 Brown Ave.,Cicero,IL-60654          | 815-995-5347 | hin_ton@gmail.com          | OUS     |
+| CYali    | Mr.Scott        | 400/4 Edgbaston Road,Aurora,IL-61248      | 815-508-4841 | ryan1.scott@rediffmail.com | ALI     |
+| CYwlf    | Mr.Rober kin    | 221 Eve Legad Dr.                         | 312-442-2122 | robert_1@rediffmail.com    | WLF     |
++----------+-----------------+-------------------------------------------+--------------+----------------------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select * from Referee;
++------------+----------------+--------------------------------------+--------------+-----------------------+
+| Referee_id | Referee_name   | Referee_address                      | Referee_phno | email                 |
++------------+----------------+--------------------------------------+--------------+-----------------------+
+| R100       | Chris Gayle    | 120 Eve. Sham Ave.,Sycamore,IL 60125 | 815-508-4434 | chris2@gmail.com      |
+| R101       | Dwayne Smith   | 710 Kimberly Dr.,Dekalb,IL 60115     | 815-995-2275 | D.smith@gmail.com     |
+| R102       | Ram Sarwan     | 919 Ridge Dr.,Dekalb,IL 60115        | 678-833-4248 | ram420@gmail.com      |
+| R103       | Brian Lara     | 131 San dimas Ave.,Kent,IL 60634     | 815-508-8844 | brianrockzz@gmail.com |
+| R104       | Marlon Samuels | 815 Amber Road,Burlington,IL 60454   | 331-442-4434 | samsimba@gmail.com    |
+| R105       | BhelPuri       | 213 Fox Valley Road                  | 815-508-8854 | bhel2@gmail.com       |
++------------+----------------+--------------------------------------+--------------+-----------------------+
+6 rows in set (0.00 sec)
+
+mysql> \t

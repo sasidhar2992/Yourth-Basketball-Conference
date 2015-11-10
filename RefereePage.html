@@ -1,0 +1,43 @@
+<html lang="en">
+	<head>
+	    <meta charset="utf8">
+		<title>Swarna Venkata Naga Sasidhar reddy</title>
+		<!--<style type="text/css"/>-->
+	</head>
+	
+		<body background="YBClanding5.jpg">
+		<?php
+		DEFINE ('DB_USER', 'cs566105');
+        DEFINE ('DB_PASSWORD', '4hFQi5TJT');
+        DEFINE ('DB_HOST','courses');
+        DEFINE ('DB_NAME','cs566105');
+		$dbconnection = @mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
+        or die ('Could not connect to MySql:' .mysqli_connect_error() );
+        mysqli_set_charset($dbconnection, 'utf8');
+        $query = "select * from Referee";
+        $result = mysqli_query ($dbconnection, $query);
+		if (mysqli_num_rows($result) > 0) 
+        {
+         echo "<table>";
+         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+		{
+		echo "<tr>";
+        echo "<td>{$row['Referee_id']}</td><td>{$row['Referee_name']</td><td>{$row['Referee_address']</td><td>{$row['Referee_phno']}</td><td>{$row['email']}</td>"; 
+		echo "</tr>";
+		}
+		echo"</table>";
+		}
+		 else 
+{
+ echo "Query didn't return any result";
+}
+?>
+	<p style="text-align:right"><a href="https://twitter.com/YBC_SmallPark" target="_blank"><button type="button"><img src="twitter.jpg" width="15" height="15" alt="follow icon"/><b>follow</b>@<b>YBC</b></button></p>			
+		<br></br><br></br><br></br><br></br><br></br>
+		<marquee behavior="ALTERNATE" bgcolor="White"><img src="rockets.jpg" width="50" height="50" alt="rockets" /> &nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="razor.png" width="50" height="50" alt="razors" />
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="avalanche.jpg" width="50" height="50" alt="Avalanche" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="wolf.jpg" width="50" height="50" alt="wolf" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp <img src="outsiders.jpg" width="50" height="50" alt="outsiders" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp <img src="aliens.png" width="50" height="50" alt="aliens" />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</marquee>
+<br></br><br></br>
+</body>
+</html>

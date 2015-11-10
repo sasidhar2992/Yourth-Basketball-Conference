@@ -1,0 +1,114 @@
+mysql> Create table Referee(Referee_id varchar(5)  NOT NULL primary key, Referee_name char(25), Referee_address varchar(30), Referee_phno int(12), Referee_mailid varchar(20));
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> describe Referee;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| Referee_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Referee_name    | char(25)    | YES  |     | NULL    |       |
+| Referee_address | varchar(30) | YES  |     | NULL    |       |
+| Referee_phno    | int(12)     | YES  |     | NULL    |       |
+| Referee_mailid  | varchar(20) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> drop table Referee;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> Create table Teams( Team_id char(5) NOT NULL primary key, Team_name char(25), Coach_name char(30), Description varchar(50), Rating int(5));
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> describe Teams;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| Team_id     | char(5)     | NO   | PRI | NULL    |       |
+| Team_name   | char(25)    | YES  |     | NULL    |       |
+| Coach_name  | char(30)    | YES  |     | NULL    |       |
+| Description | varchar(50) | YES  |     | NULL    |       |
+| Rating      | int(5)      | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> drop table Teams;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> Create table Coach(Coach_id varchar(5) NOT NULL primary key, Coach_name varchar(25), Team_name varchar(20), Coach_address varchar(40), Coach_phno int(12), Coach_mailid varchar(20));
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> describe Coach;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Coach_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Coach_name    | varchar(25) | YES  |     | NULL    |       |
+| Team_name     | varchar(20) | YES  |     | NULL    |       |
+| Coach_address | varchar(40) | YES  |     | NULL    |       |
+| Coach_phno    | int(12)     | YES  |     | NULL    |       |
+| Coach_mailid  | varchar(20) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> drop table Coach;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> Create table Players(Player_id varchar(5) NOT NULL primary key, Player_name varchar(25), Team_name varchar(20), Player_address varchar(40), Home_phno int(12), Player_mailid varchar(20), Points_scored int(5));
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> describe Players;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| Player_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Player_name    | varchar(25) | YES  |     | NULL    |       |
+| Team_name      | varchar(20) | YES  |     | NULL    |       |
+| Player_address | varchar(40) | YES  |     | NULL    |       |
+| Home_phno      | int(12)     | YES  |     | NULL    |       |
+| Player_mailid  | varchar(20) | YES  |     | NULL    |       |
+| Points_scored  | int(5)      | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> drop table Players;
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> Create table Games(Game_number int(2) NOT NULL primary key, Match_date date, Stadium varchar(30), Home_team char(5), Points_home int(5), Away_team char(5), Points_away int(5)); 
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> describe Games;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| Game_number | int(2)      | NO   | PRI | NULL    |       |
+| Match_date  | date        | YES  |     | NULL    |       |
+| Stadium     | varchar(30) | YES  |     | NULL    |       |
+| Home_team   | char(5)     | YES  |     | NULL    |       |
+| Points_home | int(5)      | YES  |     | NULL    |       |
+| Away_team   | char(5)     | YES  |     | NULL    |       |
+| Points_away | int(5)      | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> drop table Games;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> Create table Standings(Team_name char(25) primary key, Matches_won int(5), Matches_lost int(5), No_results int(5), Total_points int(5));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> describe Standings;
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| Team_name    | char(25) | NO   | PRI | NULL    |       |
+| Matches_won  | int(5)   | YES  |     | NULL    |       |
+| Matches_lost | int(5)   | YES  |     | NULL    |       |
+| No_results   | int(5)   | YES  |     | NULL    |       |
+| Total_points | int(5)   | YES  |     | NULL    |       |
++--------------+----------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> drop table Standings;
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> \t

@@ -1,0 +1,3 @@
+mysql> Create table Referee(Referee_id varchar(5)  NOT NULL primary key, Referee_name char(25), Referee_address varchar(30), Referee_phno int(12), Referee_mailid varchar(20));
+ERROR 1050 (42S01): Table 'Referee' already exists
+mysql> \t

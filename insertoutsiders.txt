@@ -1,0 +1,31 @@
+INSERT INTO Players
+VALUES
+('OUT99','Alexander MacKenzie','Outsiders','45 Pappas Ct','555-0009','alexmackenzy@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT55','Brian Fraser','Outsiders','49 Pappas Ct','555-1029','brian66@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT22','Claire Randall','Outsiders','145 Vinay Dr','555-2983','randall92@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT02','Bukka White','Outsiders','99 Kolla Rd','555-3746','bwhite91@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT65','Miles Matheson','Outsiders','123 Harsha Ave','555-5123','mileshigh65@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT12','Sebastian Monroe','Outsiders','6700 BlackHawk St','555-5234','monroe12@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT18','Aaron Pittman','Outsiders','89 First Rd','555-5345','aaronpittman@outsiders.org',' ');
+
+INSERT INTO Players
+VALUES
+('OUT01','John Pope','Outsiders','66 Kelven St','555-5456','popejohn1@outsiders.org',' ');

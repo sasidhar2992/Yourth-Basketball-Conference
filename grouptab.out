@@ -1,0 +1,74 @@
+
+
+			  CONTENT OF TABLES
+
+
+
+mysql> describe Teams;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| Team_id        | char(5)      | NO   | PRI | NULL    |       |
+| Team_name      | char(25)     | NO   | MUL | NULL    |       |
+| Description    | varchar(150) | YES  |     | NULL    |       |
+| Matches_Played | int(5)       | YES  | MUL | NULL    |       |
+| Matches_won    | int(5)       | YES  | MUL | NULL    |       |
+| Matches_lost   | int(5)       | YES  | MUL | NULL    |       |
+| No_results     | int(5)       | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql> describe Games;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| Game_number | int(5)      | NO   | PRI | 0       |       |
+| Match_date  | date        | NO   |     | NULL    |       |
+| Match_time  | time        | NO   |     | NULL    |       |
+| Stadium     | varchar(20) | YES  |     | NULL    |       |
+| Home_team   | char(5)     | YES  |     | NULL    |       |
+| Points_home | int(5)      | YES  |     | NULL    |       |
+| Away_team   | char(5)     | YES  |     | NULL    |       |
+| Points_away | int(5)      | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> describe Players;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| Player_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Player_name    | char(25)    | NO   |     | NULL    |       |
+| Player_address | varchar(60) | YES  |     | NULL    |       |
+| Home_phno      | varchar(14) | YES  |     | NULL    |       |
+| Player_email   | varchar(25) | YES  |     | NULL    |       |
+| Team_id        | varchar(5)  | NO   |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> describe Coach;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Coach_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Coach_name    | char(25)    | NO   |     | NULL    |       |
+| Coach_address | varchar(60) | YES  |     | NULL    |       |
+| Coach_phno    | varchar(12) | YES  |     | NULL    |       |
+| email         | varchar(30) | YES  |     | NULL    |       |
+| Team_id       | varchar(5)  | NO   |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> describe Referee;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| Referee_id      | varchar(5)  | NO   | PRI | NULL    |       |
+| Referee_name    | char(25)    | NO   |     | NULL    |       |
+| Referee_address | varchar(60) | YES  |     | NULL    |       |
+| Referee_phno    | varchar(12) | YES  |     | NULL    |       |
+| email           | varchar(25) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> \t
